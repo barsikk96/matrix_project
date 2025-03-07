@@ -14,7 +14,7 @@ typedef struct {
 } Matrix;
 
 /**
-* @brief Создает новую матрицу с заданными размерами
+* @brief Создает новую матрицу с заданными размерами и инициализирует её нулями
 * @param rows Количество строк
 * @param cols Количество столбцов
 * @return Указатель на созданную матрицу или NULL в случае ошибки
@@ -33,20 +33,6 @@ void free_matrix(Matrix* matrix);
 * @return Указатель на загруженную матрицу или NULL в случае ошибки
 */
 Matrix* load_matrix_from_file(const char* filename);
-
-/**
-* @brief Выводит матрицу в консоль
-* @param matrix Указатель на матрицу
-*/
-void print_matrix(const Matrix* matrix);
-
-/**
-* @brief Сохраняет матрицу в текстовый файл
-* @param matrix Указатель на матрицу
-* @param filename Имя файла
-* @return 0 в случае успеха, -1 в случае ошибки
-*/
-int save_matrix_to_file(const Matrix* matrix, const char* filename);
 
 /**
 * @brief Копирует матрицу
@@ -84,5 +70,12 @@ Matrix* transpose_matrix(const Matrix* matrix);
 * @return Значение детерминанта матрицы
 */
 MATRIX_TYPE determinant(const Matrix* matrix);
+
+/**
+* @brief Преобразует матрицу в строку
+* @param matrix Указатель на матрицу
+* @return Указатель на строку
+*/
+char* converting_to_string(Matrix* matrix);
 
 #endif // MATRIX_H

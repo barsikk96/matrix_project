@@ -10,8 +10,9 @@ TESTS_DIR = tests
 OBJ = $(SRC_DIR)/main.o $(MATRIX_DIR)/matrix.o $(OUTPUT_DIR)/output.o
 TEST_OBJ = $(TESTS_DIR)/tests_matrix.o $(MATRIX_DIR)/matrix.o $(OUTPUT_DIR)/output.o
 
-TARGET = matrix_main
-TEST_TARGET = tests_run
+BIN_DIR = build
+TARGET = $(BIN_DIR)/matrix_main
+TEST_TARGET = $(BIN_DIR)/tests_run
 
 SRCS = $(SRC_DIR)/main.c $(MATRIX_DIR)/matrix.c $(OUTPUT_DIR)/output.c $(TESTS_DIR)/tests_matrix.c
 
