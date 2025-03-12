@@ -123,13 +123,34 @@ Matrix* copy_matrix(const Matrix* source) {
  * @return Указатель на новую матрицу — результат сложения, либо NULL в случае ошибки
  */
 Matrix* add_matrices(const Matrix* A, const Matrix* B) {
-    Matrix* result = NULL; // Инициализация указателя
+    Matrix* result = NULL; ///< Инициализация указателя
     if (A && B && A->rows == B->rows && A->cols == B->cols) { // Проверка корректности
         result = create_matrix(A->rows, A->cols);
-        if (result) { // Проверка успешного выделения памяти
+        if (result) { ///< Проверка успешного выделения памяти
             for (size_t i = 0; i < (size_t)A->rows; i++) {
                 for (size_t j = 0; j < (size_t)A->cols; j++) {
-                    result->data[i][j] = A->data[i][j] + B->data[i][j]; // Сложение элементов
+                    result->data[i][j] = A->data[i][j] + B->data[i][j]; ///< Сложение элементов
+                }
+            }
+        }
+    }
+    return result;
+}
+
+/**
+ * @brief Вычитает одну матрицу из другой
+ * @param A Указатель на первую матрицу
+ * @param B Указатель на вторую матрицу
+ * @return Указатель на новую матрицу — результат вычитания, либо NULL в случае ошибки
+ */
+Matrix* subtract_matrices(const Matrix* A, const Matrix* B) {
+    Matrix* result = NULL; ///< Инициализация указателя
+    if (A && B && A->rows == B->rows && A->cols == B->cols) { ///< Проверка корректности
+        result = create_matrix(A->rows, A->cols);
+        if (result) { ///< Проверка успешного выделения памяти
+            for (size_t i = 0; i < (size_t)A->rows; i++) {
+                for (size_t j = 0; j < (size_t)A->cols; j++) {
+                    result->data[i][j] = A->data[i][j] - B->data[i][j]; ///< Вычитание элементов
                 }
             }
         }

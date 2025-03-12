@@ -50,6 +50,14 @@ Matrix* copy_matrix(const Matrix* source);
 Matrix* add_matrices(const Matrix* A, const Matrix* B);
 
 /**
+ * @brief Вычитает одну матрицу из другой
+ * @param A Указатель на первую матрицу
+ * @param B Указатель на вторую матрицу
+ * @return Указатель на новую матрицу — результат вычитания, либо NULL в случае ошибки
+ */
+Matrix* subtract_matrices(const Matrix* A, const Matrix* B);
+
+/**
 * @brief Умножает две матрицы
 * @param A Указатель на первую матрицу
 * @param B Указатель на вторую матрицу
