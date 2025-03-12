@@ -1,9 +1,9 @@
-#include "/home/ethelay/homework/matrix_project/src/matrix/matrix.h"
-#include "/home/ethelay/homework/matrix_project/src/output/output.h"
+#include "matrix/matrix.h"
+#include "output/output.h"
 
 int main() {
-    Matrix* A = load_matrix_from_file("/home/ethelay/homework/matrix_project/src/matrixA.txt");
-    Matrix* B = load_matrix_from_file("/home/ethelay/homework/matrix_project/src/matrixB.txt");
+    Matrix* A = load_matrix_from_file("matrixA.txt");
+    Matrix* B = load_matrix_from_file("matrixB.txt");
     Matrix* C = create_matrix(2, 2);
 
     char* result = converting_to_string(A);
