@@ -3,10 +3,10 @@
 
 #include <stdio.h>
 
-void erase_file_data(const char* path);
+void erase_file_data(const char *path);
 
-void save_to_file(const char* data);
+void save_to_file(const char *data);
 
-void print_data(const char* data, int type_of_output);
+void print_data(const char *data, int type_of_output);
 
 #endif
