@@ -10,13 +10,15 @@ TESTS_DIR = tests
 OBJ = $(SRC_DIR)/main.o $(MATRIX_DIR)/matrix.o $(OUTPUT_DIR)/output.o
 TEST_MATRIX_OBJ = $(TESTS_DIR)/tests_matrix.o $(MATRIX_DIR)/matrix.o $(OUTPUT_DIR)/output.o
 TEST_OUTPUT_OBJ = $(TESTS_DIR)/tests_output.o $(MATRIX_DIR)/matrix.o $(OUTPUT_DIR)/output.o
+TEST_MAIN_OBJ = $(TESTS_DIR)/tests_main.o $(MATRIX_DIR)/matrix.o $(OUTPUT_DIR)/output.o
 
 BIN_DIR = build
 TARGET_MAIN = $(BIN_DIR)/matrix_main
 TEST_MATRIX_TARGET = $(BIN_DIR)/tests_matrix
 TEST_OUTPUT_TARGET = $(BIN_DIR)/tests_output
+TEST_MAIN_TARGET = $(BIN_DIR)/tests_main
 
-SRCS = $(SRC_DIR)/main.c $(MATRIX_DIR)/matrix.c $(OUTPUT_DIR)/output.c $(TESTS_DIR)/tests_matrix.c $(TESTS_DIR)/tests_output.c
+SRCS = $(SRC_DIR)/main.c $(MATRIX_DIR)/matrix.c $(OUTPUT_DIR)/output.c $(TESTS_DIR)/tests_matrix.c $(TESTS_DIR)/tests_output.c $(TESTS_DIR)/tests_main.c
 
 $(TARGET_MAIN): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET_MAIN)
@@ -24,6 +26,8 @@ $(TEST_MATRIX_TARGET): $(TEST_MATRIX_OBJ)
 	$(CC) $(CFLAGS) $(TEST_MATRIX_OBJ) -o $(TEST_MATRIX_TARGET)
 $(TEST_OUTPUT_TARGET): $(TEST_OUTPUT_OBJ)
 	$(CC) $(CFLAGS) $(TEST_OUTPUT_OBJ) -o $(TEST_OUTPUT_TARGET)
+$(TEST_MAIN_TARGET): $(TEST_MAIN_OBJ)
+	$(CC) $(CFLAGS) $(TEST_MAIN_OBJ) -o $(TEST_MAIN_TARGET)
 
 
 $(SRC_DIR)%.o: $(SRC_DIR)%.c
@@ -48,6 +52,6 @@ format:
 	clang-format -style=LLVM -i src/*.c src/matrix/*.h src/matrix/*.c src/output/*.h src/output/*.c tests/*.c include/*.h
 
 clean:
-	rm -f $(OBJ) $(TEST_MATRIX_OBJ) $(TEST_OUTPUT_OBJ) $(TARGET_MAIN) $(TEST_MATRIX_TARGET) $(TEST_OUTPUT_TARGET)
+	rm -f $(OBJ) $(TEST_MATRIX_OBJ) $(TEST_OUTPUT_OBJ) $(TEST_MAIN_OBJ) $(TARGET_MAIN) $(TEST_MATRIX_TARGET) $(TEST_OUTPUT_TARGET) $(TEST_MAIN_TARGET)
 
-rebuild: clean $(TARGET_MAIN) $(TEST_MATRIX_TARGET) $(TEST_OUTPUT_TARGET)
+rebuild: clean $(TARGET_MAIN) $(TEST_MATRIX_TARGET) $(TEST_OUTPUT_TARGET) $(TEST_MAIN_TARGET)
