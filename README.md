@@ -34,35 +34,35 @@
 
 ## Основные функции
 ### 1. Создание и удаление матриц
-Matrix *create_matrix(int rows, int cols) - Создает матрицу заданного размера и инициализирует её нулями. Возвращает указатель на созданную матрицу или NULL, если выделение памяти не удалось.
+```Matrix *create_matrix(int rows, int cols)``` - Создает матрицу заданного размера и инициализирует её нулями. Возвращает указатель на созданную матрицу или NULL, если выделение памяти не удалось.
 
-void free_matrix(Matrix *matrix) - Освобождает память, выделенную под матрицу.
+```void free_matrix(Matrix *matrix)``` - Освобождает память, выделенную под матрицу.
 
 ### 2. Загрузка и сохранение матриц
-Matrix *load_matrix_from_file(const char *filename) - Загружает матрицу из текстового файла. Файл должен содержать размеры матрицы (количество строк и столбцов), а затем элементы матрицы.
+```Matrix *load_matrix_from_file(const char *filename)``` - Загружает матрицу из текстового файла. Файл должен содержать размеры матрицы (количество строк и столбцов), а затем элементы матрицы.
 
-char *converting_to_string(Matrix *matrix) - Преобразует матрицу в строку для вывода в консоль или сохранения в файл.
+```char *converting_to_string(Matrix *matrix)``` - Преобразует матрицу в строку для вывода в консоль или сохранения в файл.
 
 ### 3. Операции с матрицами
-Matrix *add_matrices(const Matrix *A, const Matrix *B) - Складывает две матрицы. Возвращает новую матрицу-результат или NULL, если размеры матриц не совпадают.
+```Matrix *add_matrices(const Matrix *A, const Matrix *B)``` - Складывает две матрицы. Возвращает новую матрицу-результат или NULL, если размеры матриц не совпадают.
 
-Matrix *subtract_matrices(const Matrix *A, const Matrix *B) - Вычитает одну матрицу из другой. Возвращает новую матрицу-результат или NULL, если размеры матриц не совпадают.
+```Matrix *subtract_matrices(const Matrix *A, const Matrix *B)``` - Вычитает одну матрицу из другой. Возвращает новую матрицу-результат или NULL, если размеры матриц не совпадают.
 
-Matrix *multiply_matrices(const Matrix *A, const Matrix *B) - Умножает две матрицы. Возвращает новую матрицу-результат или NULL, если количество столбцов первой матрицы не совпадает с количеством строк второй.
+```Matrix *multiply_matrices(const Matrix *A, const Matrix *B)``` - Умножает две матрицы. Возвращает новую матрицу-результат или NULL, если количество столбцов первой матрицы не совпадает с количеством строк второй.
 
-Matrix *transpose_matrix(const Matrix *matrix) - Транспонирует матрицу. Возвращает новую транспонированную матрицу или NULL, если исходная матрица не была создана.
+```Matrix *transpose_matrix(const Matrix *matrix)``` - Транспонирует матрицу. Возвращает новую транспонированную матрицу или NULL, если исходная матрица не была создана.
 
-MATRIX_TYPE determinant(const Matrix *matrix) - Вычисляет детерминант квадратной матрицы. Возвращает значение детерминанта.
+```MATRIX_TYPE determinant(const Matrix *matrix)``` - Вычисляет детерминант квадратной матрицы. Возвращает значение детерминанта.
 
 ### 4. Вычисление выражения
-Matrix *compute_expression(const Matrix *A, const Matrix *B, const Matrix *C, const Matrix *D) - Вычисляет выражение (A^T − B + C) × D, где A^T — транспонированная матрица A. Возвращает результирующую матрицу или NULL, если входные данные некорректны.
+```Matrix *compute_expression(const Matrix *A, const Matrix *B, const Matrix *C, const Matrix *D)``` - Вычисляет выражение (A^T − B + C) × D, где A^T — транспонированная матрица A. Возвращает результирующую матрицу или NULL, если входные данные некорректны.
 
 ### 5. Вывод данных
-void print_data(const char *data, int type_of_output) - Выводит данные в консоль или сохраняет их в файл results/result.txt в зависимости от выбора пользователя.
+```void print_data(const char *data, int type_of_output)``` - Выводит данные в консоль или сохраняет их в файл results/result.txt в зависимости от выбора пользователя.
 
-void save_to_file(const char *data, const char *path) - Сохраняет данные в указанный файл.
+```void save_to_file(const char *data, const char *path)``` - Сохраняет данные в указанный файл.
 
-void erase_file_data(const char *path) - Очищает содержимое файла.
+```void erase_file_data(const char *path)``` - Очищает содержимое файла.
 
 ## Установка и сборка
 ### Требования
