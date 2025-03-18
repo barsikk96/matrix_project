@@ -1,6 +1,4 @@
-#include "../src/output/output.h"
-#include <assert.h>
-#include <string.h>
+#include "tests_output.h"
 
 /**
  * @brief Тест для функции erase_file_data.
@@ -23,9 +21,6 @@ void test_erase_file_data() {
   assert(fscanf(test_file, "%s", buffer) == EOF && "Файл не был очищен!");
   fclose(test_file);
 
-  printf("---------------------------------------------------------------------"
-         "-----------");
-
   printf("\nТестирование очищения файла успешно пройдено!\n");
 
   remove("test_file.txt");
@@ -43,7 +38,7 @@ void test_save_to_file() {
   erase_file_data(path);
 
   // Сохраняем данные в файл
-  save_to_file(data);
+  save_to_file(data, path);
 
   // Проверяем, что данные записаны корректно
   FILE *file = fopen(path, "r");
@@ -55,8 +50,6 @@ void test_save_to_file() {
   fclose(file);
 
   printf("Тестирование сохранения данных в файл успешно пройдено!\n");
-  printf("---------------------------------------------------------------------"
-         "-----------");
 }
 
 /**
@@ -84,9 +77,6 @@ void test_print_data() {
          "Данные в файле не соответствуют ожидаемым!");
   fclose(file);
 
-  printf("---------------------------------------------------------------------"
-         "-----------");
-
   // Тестируем случай с неверным типом вывода (type_of_output = 3)
   printf("\nОжидаемый вывод: 'Вы ввели неверное число! Попробуйте ещё раз!'\n");
   print_data(data, 3);
@@ -96,19 +86,4 @@ void test_print_data() {
   print_data(NULL, 1);
 
   printf("\nТестирование вывода в консоль успешно пройдено!\n");
-
-  printf("---------------------------------------------------------------------"
-         "-----------\n");
-}
-
-/**
- * @brief Основная функция для запуска тестов.
- * @return 0, если все тесты прошли успешно.
- */
-int main() {
-  test_erase_file_data();
-  test_save_to_file();
-  test_print_data();
-
-  return 0;
 }

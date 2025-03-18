@@ -97,6 +97,7 @@ char *converting_to_string(Matrix *matrix);
  * @param D Матрица D
  * @return Указатель на результирующую матрицу
  */
-Matrix *compute_expression(const Matrix *A, const Matrix *B, const Matrix *C, const Matrix *D);
+Matrix *compute_expression(const Matrix *A, const Matrix *B, const Matrix *C,
+                           const Matrix *D);
 
 #endif // MATRIX_H

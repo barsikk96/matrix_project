@@ -1,7 +1,4 @@
-#include "../src/matrix/matrix.h"
-#include <assert.h>
-#include <string.h>
-#include <unistd.h>
+#include "tests_matrix.h"
 
 void test_create_delete_matrix() {
   Matrix *matrix = create_matrix(3, 3);
@@ -164,34 +161,4 @@ void test_converting_to_string() {
 
   free(result);
   free_matrix(A);
-}
-
-int main() {
-  printf("Тестирование создания матрицы..\n");
-  sleep(1);
-  test_create_delete_matrix();
-  printf("Тестирование сложения матриц..\n");
-  sleep(1);
-  test_add_matrices();
-  printf("Тестирование вычитания матриц..\n");
-  sleep(1);
-  test_subtract_matrices();
-  printf("Тестирование умножения матриц..\n");
-  sleep(1);
-  test_multiply_matrices();
-  printf("Тестирование транспонирования матрицы..\n");
-  sleep(1);
-  test_transpose_matrix();
-  printf("Тестирование вычисления детерминанта матрицы..\n");
-  sleep(1);
-  test_determinant();
-  printf("Тестирование копирования матрицы..\n");
-  sleep(1);
-  test_copy_matrix();
-  printf("Тестирование конвертации матрицы в строку..\n");
-  sleep(1);
-  test_converting_to_string();
-
-  printf("Тестирование фукнций модуля matrix прошло успешно!\n");
-  return 0;
 }

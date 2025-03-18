@@ -1,15 +1,17 @@
 #include "output.h"
 
+const char *result_file = {"../results/result.txt"};
+
 void erase_file_data(const char *path) {
   FILE *result_file = fopen(path, "w");
   fclose(result_file);
 }
 
-void save_to_file(const char *data) {
-  erase_file_data("../results/result.txt");
-  FILE *file = fopen("../results/result.txt", "a");
+void save_to_file(const char *data, const char *path) {
+  erase_file_data(path);
+  FILE *file = fopen(path, "a");
   if (file) {
-    fprintf(file, "%s\n\n", data);
+    fprintf(file, "%s\n", data);
     fclose(file);
   }
 }
@@ -21,7 +23,7 @@ void print_data(const char *data, int type_of_output) {
       puts(data);
       break;
     case 2:
-      save_to_file(data);
+      save_to_file(data, result_file);
       printf("Данные были записаны в файл result.txt!\n");
       break;
     default:

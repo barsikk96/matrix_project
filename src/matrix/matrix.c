@@ -74,15 +74,15 @@ Matrix *load_matrix_from_file(const char *filename) {
   }
 
   int rows, cols;
-  Matrix *matrix = NULL; // Инициализация переменной матрицы
-  int error = 0; // Флаг ошибки
+  Matrix *matrix = NULL; ///< Инициализация переменной матрицы
+  int error = 0; ///< Флаг ошибки
 
   if (fscanf(file, "%d %d", &rows, &cols) != 2) {
-    error = 1; // Ошибка чтения размеров матрицы
+    error = 1; ///< Ошибка чтения размеров матрицы
   } else {
     matrix = create_matrix(rows, cols);
     if (!matrix) {
-      error = 1; // Ошибка создания матрицы
+      error = 1; ///< Ошибка создания матрицы
     } else {
       for (size_t i = 0; i < (size_t)rows && !error; i++) {
         for (size_t j = 0; j < (size_t)cols && !error; j++) {
@@ -290,17 +290,18 @@ char *converting_to_string(Matrix *matrix) {
   return result;
 }
 
-Matrix *compute_expression(const Matrix *A, const Matrix *B, const Matrix *C, const Matrix *D) {
-	Matrix *temp1 = transpose_matrix(A);
-	Matrix *temp2 = subtract_matrices(temp1, B);
-	Matrix *temp3 = add_matrices(temp2, C);
-	Matrix *temp4 = multiply_matrices(temp3, D);
-	Matrix *result = copy_matrix(temp4);
+Matrix *compute_expression(const Matrix *A, const Matrix *B, const Matrix *C,
+                           const Matrix *D) {
+  Matrix *temp1 = transpose_matrix(A);
+  Matrix *temp2 = subtract_matrices(temp1, B);
+  Matrix *temp3 = add_matrices(temp2, C);
+  Matrix *temp4 = multiply_matrices(temp3, D);
+  Matrix *result = copy_matrix(temp4);
 
-	free_matrix(temp1);
-	free_matrix(temp2);
-	free_matrix(temp3);
-	free_matrix(temp4);
+  free_matrix(temp1);
+  free_matrix(temp2);
+  free_matrix(temp3);
+  free_matrix(temp4);
 
-	return result;
+  return result;
 }
