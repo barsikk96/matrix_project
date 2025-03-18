@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>matrix_project: Файл src/matrix/matrix.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">matrix_project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_40d7732de2983c682bb99d86585a563c.html">matrix</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл matrix.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="matrix_8h_source.html">matrix.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для matrix.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="matrix_8c__incl.png" border="0" usemap="#asrc_2matrix_2matrix_8c" alt=""/></div>
+<map name="asrc_2matrix_2matrix_8c" id="asrc_2matrix_2matrix_8c">
+<area shape="rect" title=" " alt="" coords="138,5,285,31"/>
+<area shape="rect" href="matrix_8h.html" title=" " alt="" coords="173,79,250,104"/>
+<area shape="poly" title=" " alt="" coords="214,31,214,65,209,65,209,31"/>
+<area shape="rect" href="config_8h.html" title=" " alt="" coords="5,152,153,177"/>
+<area shape="poly" title=" " alt="" coords="191,106,114,148,112,143,189,102"/>
+<area shape="rect" title=" " alt="" coords="178,152,245,177"/>
+<area shape="poly" title=" " alt="" coords="214,104,214,138,209,138,209,104"/>
+<area shape="rect" title=" " alt="" coords="269,152,340,177"/>
+<area shape="poly" title=" " alt="" coords="228,102,280,141,277,146,225,106"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a68f143172ca254d74db01fecfd510436" id="r_a68f143172ca254d74db01fecfd510436"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a68f143172ca254d74db01fecfd510436">create_matrix</a> (int rows, int cols)</td></tr>
+<tr class="memdesc:a68f143172ca254d74db01fecfd510436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает матрицу и инициализирует ее нулями  <br /></td></tr>
+<tr class="separator:a68f143172ca254d74db01fecfd510436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d02d88d9c14615366e3c61a6755339e" id="r_a3d02d88d9c14615366e3c61a6755339e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a3d02d88d9c14615366e3c61a6755339e">free_matrix</a> (<a class="el" href="structMatrix.html">Matrix</a> *matrix)</td></tr>
+<tr class="memdesc:a3d02d88d9c14615366e3c61a6755339e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Освобождает память, выделенную под матрицу  <br /></td></tr>
+<tr class="separator:a3d02d88d9c14615366e3c61a6755339e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7faf574eeeec6da353ea06cafd08cd3c" id="r_a7faf574eeeec6da353ea06cafd08cd3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a7faf574eeeec6da353ea06cafd08cd3c">load_matrix_from_file</a> (const char *filename)</td></tr>
+<tr class="memdesc:a7faf574eeeec6da353ea06cafd08cd3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загружает матрицу из текстового файла  <br /></td></tr>
+<tr class="separator:a7faf574eeeec6da353ea06cafd08cd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434254404b00b33c5d35dbfd0694e6d9" id="r_a434254404b00b33c5d35dbfd0694e6d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a434254404b00b33c5d35dbfd0694e6d9">copy_matrix</a> (const <a class="el" href="structMatrix.html">Matrix</a> *source)</td></tr>
+<tr class="memdesc:a434254404b00b33c5d35dbfd0694e6d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирует матрицу  <br /></td></tr>
+<tr class="separator:a434254404b00b33c5d35dbfd0694e6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a686c5488cbc4ff0282332e85330b5b4b" id="r_a686c5488cbc4ff0282332e85330b5b4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a686c5488cbc4ff0282332e85330b5b4b">add_matrices</a> (const <a class="el" href="structMatrix.html">Matrix</a> *A, const <a class="el" href="structMatrix.html">Matrix</a> *B)</td></tr>
+<tr class="memdesc:a686c5488cbc4ff0282332e85330b5b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Складывает две матрицы  <br /></td></tr>
+<tr class="separator:a686c5488cbc4ff0282332e85330b5b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69729d87b6f5c17a8e129a7926021f3" id="r_ab69729d87b6f5c17a8e129a7926021f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#ab69729d87b6f5c17a8e129a7926021f3">subtract_matrices</a> (const <a class="el" href="structMatrix.html">Matrix</a> *A, const <a class="el" href="structMatrix.html">Matrix</a> *B)</td></tr>
+<tr class="memdesc:ab69729d87b6f5c17a8e129a7926021f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычитает одну матрицу из другой  <br /></td></tr>
+<tr class="separator:ab69729d87b6f5c17a8e129a7926021f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a284692b924ed9435ebe878a822b16cef" id="r_a284692b924ed9435ebe878a822b16cef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a284692b924ed9435ebe878a822b16cef">multiply_matrices</a> (const <a class="el" href="structMatrix.html">Matrix</a> *A, const <a class="el" href="structMatrix.html">Matrix</a> *B)</td></tr>
+<tr class="memdesc:a284692b924ed9435ebe878a822b16cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Умножает две матрицы  <br /></td></tr>
+<tr class="separator:a284692b924ed9435ebe878a822b16cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a633165d7617b31fa4ba0d0fc7b8447" id="r_a5a633165d7617b31fa4ba0d0fc7b8447"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a5a633165d7617b31fa4ba0d0fc7b8447">transpose_matrix</a> (const <a class="el" href="structMatrix.html">Matrix</a> *matrix)</td></tr>
+<tr class="memdesc:a5a633165d7617b31fa4ba0d0fc7b8447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Транспонирует матрицу  <br /></td></tr>
+<tr class="separator:a5a633165d7617b31fa4ba0d0fc7b8447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b1953b59b06977a9459581eb8b1605" id="r_a80b1953b59b06977a9459581eb8b1605"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8h.html#afe97592ec7380216ca494c4134cad077">MATRIX_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a80b1953b59b06977a9459581eb8b1605">determinant</a> (const <a class="el" href="structMatrix.html">Matrix</a> *matrix)</td></tr>
+<tr class="memdesc:a80b1953b59b06977a9459581eb8b1605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисляет детерминант квадратной матрицы  <br /></td></tr>
+<tr class="separator:a80b1953b59b06977a9459581eb8b1605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812ef0971f1350b1f43c443e998a4334" id="r_a812ef0971f1350b1f43c443e998a4334"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a812ef0971f1350b1f43c443e998a4334">converting_to_string</a> (<a class="el" href="structMatrix.html">Matrix</a> *matrix)</td></tr>
+<tr class="memdesc:a812ef0971f1350b1f43c443e998a4334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразует матрицу в строку  <br /></td></tr>
+<tr class="separator:a812ef0971f1350b1f43c443e998a4334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9462df7c359bc32ffadc17346a705b18" id="r_a9462df7c359bc32ffadc17346a705b18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix_8c.html#a9462df7c359bc32ffadc17346a705b18">compute_expression</a> (const <a class="el" href="structMatrix.html">Matrix</a> *A, const <a class="el" href="structMatrix.html">Matrix</a> *B, const <a class="el" href="structMatrix.html">Matrix</a> *C, const <a class="el" href="structMatrix.html">Matrix</a> *D)</td></tr>
+<tr class="separator:a9462df7c359bc32ffadc17346a705b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a686c5488cbc4ff0282332e85330b5b4b" name="a686c5488cbc4ff0282332e85330b5b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a686c5488cbc4ff0282332e85330b5b4b">&#9670;&#160;</a></span>add_matrices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> * add_matrices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Складывает две матрицы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Указатель на первую матрицу </td></tr>
+    <tr><td class="paramname">B</td><td>Указатель на вторую матрицу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на новую матрицу — результат сложения, либо NULL в случае ошибки </dd></dl>
+<p>&lt; Инициализация указателя</p>
+<p>&lt; Проверка успешного выделения памяти</p>
+<p>&lt; Сложение элементов</p>
+
+</div>
+</div>
+<a id="a9462df7c359bc32ffadc17346a705b18" name="a9462df7c359bc32ffadc17346a705b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9462df7c359bc32ffadc17346a705b18">&#9670;&#160;</a></span>compute_expression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> * compute_expression </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>D</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a812ef0971f1350b1f43c443e998a4334" name="a812ef0971f1350b1f43c443e998a4334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a812ef0971f1350b1f43c443e998a4334">&#9670;&#160;</a></span>converting_to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * converting_to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преобразует матрицу в строку </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Указатель на матрицу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на строку </dd></dl>
+<p>&lt; 12 байт на число (с запасом)</p>
+
+</div>
+</div>
+<a id="a434254404b00b33c5d35dbfd0694e6d9" name="a434254404b00b33c5d35dbfd0694e6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434254404b00b33c5d35dbfd0694e6d9">&#9670;&#160;</a></span>copy_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> * copy_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Копирует матрицу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Указатель на исходную матрицу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на копию матрицы или NULL в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a68f143172ca254d74db01fecfd510436" name="a68f143172ca254d74db01fecfd510436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68f143172ca254d74db01fecfd510436">&#9670;&#160;</a></span>create_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> * create_matrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создает матрицу и инициализирует ее нулями </p>
+<p>Создает новую матрицу с заданными размерами и инициализирует её нулями</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rows</td><td>Количество строк </td></tr>
+    <tr><td class="paramname">cols</td><td>Количество столбцов </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на созданную матрицу </dd></dl>
+<p>&lt; Указатель на создаваемую матрицу</p>
+<p>&lt; Проверка корректности размеров матрицы</p>
+<p>&lt; Выделение памяти для структуры <a class="el" href="structMatrix.html" title="Структура матрицы">Matrix</a></p>
+<p>&lt; Выделение памяти для массива указателей на строки</p>
+<p>&lt; Проверка успешности выделения памяти под строки</p>
+<p>&lt; Выделение памяти под столбцы каждой строки</p>
+<p>&lt; Проверка успешности выделения памяти</p>
+<p>&lt; Освобождение уже выделенной памяти в случае ошибки</p>
+<p>&lt; Освобождение памяти в случае ошибки выделения под массив строк</p>
+<p>&lt; Возвращение указателя на созданную матрицу или NULL в случае ошибки</p>
+
+</div>
+</div>
+<a id="a80b1953b59b06977a9459581eb8b1605" name="a80b1953b59b06977a9459581eb8b1605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b1953b59b06977a9459581eb8b1605">&#9670;&#160;</a></span>determinant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="config_8h.html#afe97592ec7380216ca494c4134cad077">MATRIX_TYPE</a> determinant </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычисляет детерминант квадратной матрицы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Указатель на квадратную матрицу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значение детерминанта матрицы </dd></dl>
+
+</div>
+</div>
+<a id="a3d02d88d9c14615366e3c61a6755339e" name="a3d02d88d9c14615366e3c61a6755339e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d02d88d9c14615366e3c61a6755339e">&#9670;&#160;</a></span>free_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_matrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Освобождает память, выделенную под матрицу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Указатель на матрицу </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Освобождение памяти для каждой строки</p>
+<p>&lt; Освобождение памяти массива указателей</p>
+<p>&lt; Освобождение памяти структуры <a class="el" href="structMatrix.html" title="Структура матрицы">Matrix</a></p>
+
+</div>
+</div>
+<a id="a7faf574eeeec6da353ea06cafd08cd3c" name="a7faf574eeeec6da353ea06cafd08cd3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7faf574eeeec6da353ea06cafd08cd3c">&#9670;&#160;</a></span>load_matrix_from_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> * load_matrix_from_file </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загружает матрицу из текстового файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Имя файла </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на загруженную матрицу или NULL в случае ошибки </dd></dl>
+<p>&lt; Ошибка открытия файла</p>
+<p>&lt; Инициализация переменной матрицы</p>
+<p>&lt; Флаг ошибки</p>
+<p>&lt; Ошибка чтения размеров матрицы</p>
+<p>&lt; Ошибка создания матрицы</p>
+
+</div>
+</div>
+<a id="a284692b924ed9435ebe878a822b16cef" name="a284692b924ed9435ebe878a822b16cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a284692b924ed9435ebe878a822b16cef">&#9670;&#160;</a></span>multiply_matrices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> * multiply_matrices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Умножает две матрицы </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Указатель на первую матрицу </td></tr>
+    <tr><td class="paramname">B</td><td>Указатель на вторую матрицу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на новую матрицу — результат умножения, либо NULL в случае ошибки </dd></dl>
+
+</div>
+</div>
+<a id="ab69729d87b6f5c17a8e129a7926021f3" name="ab69729d87b6f5c17a8e129a7926021f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69729d87b6f5c17a8e129a7926021f3">&#9670;&#160;</a></span>subtract_matrices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> * subtract_matrices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычитает одну матрицу из другой </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Указатель на первую матрицу </td></tr>
+    <tr><td class="paramname">B</td><td>Указатель на вторую матрицу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на новую матрицу — результат вычитания, либо NULL в случае ошибки </dd></dl>
+<p>&lt; Инициализация указателя</p>
+<p>&lt; Проверка корректности</p>
+<p>&lt; Проверка успешного выделения памяти</p>
+<p>&lt; Вычитание элементов</p>
+
+</div>
+</div>
+<a id="a5a633165d7617b31fa4ba0d0fc7b8447" name="a5a633165d7617b31fa4ba0d0fc7b8447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a633165d7617b31fa4ba0d0fc7b8447">&#9670;&#160;</a></span>transpose_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMatrix.html">Matrix</a> * transpose_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMatrix.html">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Транспонирует матрицу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Указатель на матрицу </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на новую транспонированную матрицу, либо NULL в случае ошибки </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

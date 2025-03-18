@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>matrix_project: Файл tests/test_runner.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">matrix_project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл test_runner.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;/usr/include/CUnit/Basic.h&quot;</code><br />
+<code>#include &quot;/usr/include/CUnit/CUnit.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="tests__main_8h_source.html">tests_main.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tests__matrix_8h_source.html">tests_matrix.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tests__output_8h_source.html">tests_output.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для test_runner.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__runner_8c__incl.png" border="0" usemap="#atests_2test__runner_8c" alt=""/></div>
+<map name="atests_2test__runner_8c" id="atests_2test__runner_8c">
+<area shape="rect" title=" " alt="" coords="315,5,457,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,143,119"/>
+<area shape="poly" title=" " alt="" coords="341,33,157,79,155,74,340,28"/>
+<area shape="rect" title=" " alt="" coords="167,79,304,119"/>
+<area shape="poly" title=" " alt="" coords="365,33,285,75,282,70,363,28"/>
+<area shape="rect" href="tests__main_8h.html" title=" " alt="" coords="610,86,717,111"/>
+<area shape="poly" title=" " alt="" coords="427,28,611,80,609,85,426,33"/>
+<area shape="rect" href="tests__matrix_8h.html" title=" " alt="" coords="328,86,444,111"/>
+<area shape="poly" title=" " alt="" coords="389,31,389,72,383,72,383,31"/>
+<area shape="rect" href="tests__output_8h.html" title=" " alt="" coords="469,86,583,111"/>
+<area shape="poly" title=" " alt="" coords="408,29,495,77,492,82,405,33"/>
+<area shape="rect" href="matrix_8h.html" title=" " alt="" coords="305,167,464,192"/>
+<area shape="poly" title=" " alt="" coords="624,114,439,166,438,160,622,109"/>
+<area shape="rect" title=" " alt="" coords="697,240,768,265"/>
+<area shape="poly" title=" " alt="" coords="693,109,729,131,746,147,759,166,764,182,762,199,751,229,746,227,757,198,758,182,754,168,742,150,726,135,690,114"/>
+<area shape="rect" href="output_8h.html" title=" " alt="" coords="587,167,745,192"/>
+<area shape="poly" title=" " alt="" coords="666,111,668,153,662,153,661,112"/>
+<area shape="rect" title=" " alt="" coords="489,167,563,192"/>
+<area shape="poly" title=" " alt="" coords="644,114,559,162,557,158,642,109"/>
+<area shape="rect" title=" " alt="" coords="819,167,883,192"/>
+<area shape="poly" title=" " alt="" coords="692,109,812,159,810,164,690,114"/>
+<area shape="rect" href="config_8h.html" title=" " alt="" coords="311,240,459,265"/>
+<area shape="poly" title=" " alt="" coords="387,192,387,226,382,226,382,192"/>
+<area shape="rect" title=" " alt="" coords="558,240,625,265"/>
+<area shape="poly" title=" " alt="" coords="419,189,546,233,544,238,417,195"/>
+<area shape="poly" title=" " alt="" coords="441,189,684,239,683,244,440,195"/>
+<area shape="poly" title=" " alt="" coords="656,194,615,232,612,229,652,190"/>
+<area shape="poly" title=" " alt="" coords="388,112,388,153,382,153,383,111"/>
+<area shape="poly" title=" " alt="" coords="408,109,495,158,492,162,405,114"/>
+<area shape="rect" title=" " alt="" coords="211,167,281,192"/>
+<area shape="poly" title=" " alt="" coords="367,114,280,162,277,158,364,109"/>
+<area shape="rect" title=" " alt="" coords="111,167,186,192"/>
+<area shape="poly" title=" " alt="" coords="352,114,197,165,195,160,351,109"/>
+<area shape="poly" title=" " alt="" coords="548,109,635,158,632,162,545,114"/>
+<area shape="poly" title=" " alt="" coords="529,112,529,153,523,153,523,112"/>
+<area shape="poly" title=" " alt="" coords="486,114,295,167,294,162,485,109"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__runner_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

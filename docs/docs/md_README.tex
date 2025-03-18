@@ -1,2 +1,98 @@
-\chapter{README}
-\hypertarget{md_README}{}\label{md_README}\index{README@{README}}
+\chapter{Matrix Project}
+\hypertarget{md_README}{}\label{md_README}\index{Matrix Project@{Matrix Project}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+ \hypertarget{md_README_autotoc_md1}{}\doxysection{\texorpdfstring{Описание проекта}{Описание проекта}}\label{md_README_autotoc_md1}
+Этот проект представляет собой библиотеку для работы с матрицами на языке C. Включает основные операции, такие как сложение, вычитание, умножение, транспонирование, вычисление детерминанта и работу с файлами.\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{Структура проекта}{Структура проекта}}\label{md_README_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/matrix\_project\ }
+\DoxyCodeLine{│──\ src/\ }
+\DoxyCodeLine{│\ │──\ matrix/\ }
+\DoxyCodeLine{│\ │\ │──\ matrix.c\ \#\ Основная\ реализация\ операций\ с\ матрицами\ }
+\DoxyCodeLine{│\ │\ │──\ matrix.h\ \#\ Заголовочный\ файл\ }
+\DoxyCodeLine{│\ │──\ output/\ }
+\DoxyCodeLine{│\ │\ │──\ output.c\ \#\ Функции\ вывода\ матриц\ в\ консоль\ и\ файлы\ }
+\DoxyCodeLine{│\ │\ │──\ output.h\ \#\ Заголовочный\ файл\ для\ output\ }
+\DoxyCodeLine{│\ │──\ main.c\ \#\ Основной\ файл\ с\ демонстрацией\ работы\ библиотеки\ }
+\DoxyCodeLine{│──\ include/\ \#\ Общие\ заголовочные\ файлы\ }
+\DoxyCodeLine{│\ │──\ config.h\ \#\ Для\ глобальных\ настроек\ (например,\ базового\ типа\ элементов\ матриц)\ }
+\DoxyCodeLine{│──\ results/\ \#\ Файлы\ с\ результатами\ выполнения\ }
+\DoxyCodeLine{│\ │──\ result.txt\ \#\ Файл\ с\ результатом\ }
+\DoxyCodeLine{│──\ tests/\ \#\ Тесты\ }
+\DoxyCodeLine{│\ │──\ tests\_matrix.c\ \#\ Набор\ тестов\ для\ библиотеки\ matrix\ }
+\DoxyCodeLine{│\ │──\ tests\_output.c\ \#\ Набор\ тестов\ для\ библиотеки\ output\ }
+\DoxyCodeLine{│\ │──\ tests\_main.c\ \#\ Общие\ тесты\ }
+\DoxyCodeLine{│\ │──\ test\_runner.c\ \#\ Запуск\ тестов\ с\ использованием\ CUnit\ }
+\DoxyCodeLine{│──\ docs/\ \#\ Сгенерированная\ документация\ Doxygen\ }
+\DoxyCodeLine{│──\ build/\ \#\ Каталог\ для\ собранных\ файлов\ }
+\DoxyCodeLine{│──\ Makefile\ \#\ Makefile\ для\ сборки\ проекта\ }
+\DoxyCodeLine{│──\ README.md\ \#\ Описание\ проекта,\ инструкции\ по\ установке\ и\ использованию\ }
+\DoxyCodeLine{│──\ .gitignore\ \#\ Игнорируемые\ файлы\ в\ git\ (build/,\ *.o,\ docs/)\ }
+\DoxyCodeLine{│──\ .clang-\/format\ \#\ Настройки\ форматирования\ кода\ }
+\DoxyCodeLine{│──\ .github/\ }
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md3}{}\doxysection{\texorpdfstring{Основные функции}{Основные функции}}\label{md_README_autotoc_md3}
+\hypertarget{md_README_autotoc_md4}{}\doxysubsection{\texorpdfstring{1. Создание и удаление матриц}{1. Создание и удаление матриц}}\label{md_README_autotoc_md4}
+Matrix \texorpdfstring{$\ast$}{*}create\+\_\+matrix(int rows, int cols) -\/ Создает матрицу заданного размера и инициализирует её нулями. Возвращает указатель на созданную матрицу или NULL, если выделение памяти не удалось.
+
+void free\+\_\+matrix(\+Matrix \texorpdfstring{$\ast$}{*}matrix) -\/ Освобождает память, выделенную под матрицу.\hypertarget{md_README_autotoc_md5}{}\doxysubsection{\texorpdfstring{2. Загрузка и сохранение матриц}{2. Загрузка и сохранение матриц}}\label{md_README_autotoc_md5}
+Matrix \texorpdfstring{$\ast$}{*}load\+\_\+matrix\+\_\+from\+\_\+file(const char \texorpdfstring{$\ast$}{*}filename) -\/ Загружает матрицу из текстового файла. Файл должен содержать размеры матрицы (количество строк и столбцов), а затем элементы матрицы.
+
+char \texorpdfstring{$\ast$}{*}converting\+\_\+to\+\_\+string(Matrix \texorpdfstring{$\ast$}{*}matrix) -\/ Преобразует матрицу в строку для вывода в консоль или сохранения в файл.\hypertarget{md_README_autotoc_md6}{}\doxysubsection{\texorpdfstring{3. Операции с матрицами}{3. Операции с матрицами}}\label{md_README_autotoc_md6}
+Matrix \texorpdfstring{$\ast$}{*}add\+\_\+matrices(const Matrix \texorpdfstring{$\ast$}{*}A, const Matrix \texorpdfstring{$\ast$}{*}B) -\/ Складывает две матрицы. Возвращает новую матрицу-\/результат или NULL, если размеры матриц не совпадают.
+
+Matrix \texorpdfstring{$\ast$}{*}subtract\+\_\+matrices(const Matrix \texorpdfstring{$\ast$}{*}A, const Matrix \texorpdfstring{$\ast$}{*}B) -\/ Вычитает одну матрицу из другой. Возвращает новую матрицу-\/результат или NULL, если размеры матриц не совпадают.
+
+Matrix \texorpdfstring{$\ast$}{*}multiply\+\_\+matrices(const Matrix \texorpdfstring{$\ast$}{*}A, const Matrix \texorpdfstring{$\ast$}{*}B) -\/ Умножает две матрицы. Возвращает новую матрицу-\/результат или NULL, если количество столбцов первой матрицы не совпадает с количеством строк второй.
+
+Matrix \texorpdfstring{$\ast$}{*}transpose\+\_\+matrix(const Matrix \texorpdfstring{$\ast$}{*}matrix) -\/ Транспонирует матрицу. Возвращает новую транспонированную матрицу или NULL, если исходная матрица не была создана.
+
+MATRIX\+\_\+\+TYPE determinant(const Matrix \texorpdfstring{$\ast$}{*}matrix) -\/ Вычисляет детерминант квадратной матрицы. Возвращает значение детерминанта.\hypertarget{md_README_autotoc_md7}{}\doxysubsection{\texorpdfstring{4. Вычисление выражения}{4. Вычисление выражения}}\label{md_README_autotoc_md7}
+Matrix \texorpdfstring{$\ast$}{*}compute\+\_\+expression(const Matrix \texorpdfstring{$\ast$}{*}A, const Matrix \texorpdfstring{$\ast$}{*}B, const Matrix \texorpdfstring{$\ast$}{*}C, const Matrix \texorpdfstring{$\ast$}{*}D) -\/ Вычисляет выражение (A\texorpdfstring{$^\wedge$}{\string^}T − B + C) × D, где A\texorpdfstring{$^\wedge$}{\string^}T — транспонированная матрица A. Возвращает результирующую матрицу или NULL, если входные данные некорректны.\hypertarget{md_README_autotoc_md8}{}\doxysubsection{\texorpdfstring{5. Вывод данных}{5. Вывод данных}}\label{md_README_autotoc_md8}
+void print\+\_\+data(const char \texorpdfstring{$\ast$}{*}data, int type\+\_\+of\+\_\+output) -\/ Выводит данные в консоль или сохраняет их в файл results/result.\+txt в зависимости от выбора пользователя.
+
+void save\+\_\+to\+\_\+file(const char \texorpdfstring{$\ast$}{*}data, const char \texorpdfstring{$\ast$}{*}path) -\/ Сохраняет данные в указанный файл.
+
+void erase\+\_\+file\+\_\+data(const char \texorpdfstring{$\ast$}{*}path) -\/ Очищает содержимое файла.\hypertarget{md_README_autotoc_md9}{}\doxysection{\texorpdfstring{Установка и сборка}{Установка и сборка}}\label{md_README_autotoc_md9}
+\hypertarget{md_README_autotoc_md10}{}\doxysubsection{\texorpdfstring{Требования}{Требования}}\label{md_README_autotoc_md10}
+Компилятор C (gcc, clang и т. д.) Make CUnit (для тестирования) Doxygen (для документации)\hypertarget{md_README_autotoc_md11}{}\doxysubsection{\texorpdfstring{Установка}{Установка}}\label{md_README_autotoc_md11}
+Клонируйте репозиторий\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ git\ clone\ https://github.com/barsikk96/matrix\_project.git}
+\DoxyCodeLine{\ \ \ cd\ matrix\_project}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\#Сборка\ проекта}
+
+\end{DoxyCode}
+ make 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\#Использование}
+\DoxyCodeLine{Основное\ приложение\ загружает\ матрицы\ из\ файлов\ matrixA.txt,\ matrixB.txt,\ matrixC.txt,\ matrixD.txt,\ выполняет\ выражение\ (A\string^T\ −\ B\ +\ C)\ ×\ D\ и\ выводит\ результат\ в\ консоль\ или\ сохраняет\ его\ в\ файл\ results/result.txt.\ Для\ запуска\ основного\ приложения\ выполните\ из\ директории\ }
+
+\end{DoxyCode}
+ build/\`{}\`{}\`{}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./matrix\_main}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md12}{}\doxysection{\texorpdfstring{Тестирование}{Тестирование}}\label{md_README_autotoc_md12}
+Проект включает в себя набор тестов, написанных с использованием библиотеки CUnit. Для запуска тестов выполните из директории {\ttfamily build/}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./test\_runner}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md13}{}\doxysection{\texorpdfstring{Форматирование кода}{Форматирование кода}}\label{md_README_autotoc_md13}
+Для форматирования кода в соответствии с настройками .clang-\/format выполните\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ format}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md14}{}\doxysection{\texorpdfstring{Очистка проекта}{Очистка проекта}}\label{md_README_autotoc_md14}
+Для удаления скомпилированных файлов выполните\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ clean}
+
+\end{DoxyCode}
+ 

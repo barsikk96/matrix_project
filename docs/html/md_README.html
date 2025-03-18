@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>matrix_project: README</title>
+<title>matrix_project: Matrix Project</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,10 +69,89 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">README</div></div>
+  <div class="headertitle"><div class="title">Matrix Project</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Описание проекта</h1>
+<p>Этот проект представляет собой библиотеку для работы с матрицами на языке C. Включает основные операции, такие как сложение, вычитание, умножение, транспонирование, вычисление детерминанта и работу с файлами.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Структура проекта</h1>
+<div class="fragment"><div class="line">/matrix_project </div>
+<div class="line">│── src/ </div>
+<div class="line">│ │── matrix/ </div>
+<div class="line">│ │ │── matrix.c # Основная реализация операций с матрицами </div>
+<div class="line">│ │ │── matrix.h # Заголовочный файл </div>
+<div class="line">│ │── output/ </div>
+<div class="line">│ │ │── output.c # Функции вывода матриц в консоль и файлы </div>
+<div class="line">│ │ │── output.h # Заголовочный файл для output </div>
+<div class="line">│ │── main.c # Основной файл с демонстрацией работы библиотеки </div>
+<div class="line">│── include/ # Общие заголовочные файлы </div>
+<div class="line">│ │── config.h # Для глобальных настроек (например, базового типа элементов матриц) </div>
+<div class="line">│── results/ # Файлы с результатами выполнения </div>
+<div class="line">│ │── result.txt # Файл с результатом </div>
+<div class="line">│── tests/ # Тесты </div>
+<div class="line">│ │── tests_matrix.c # Набор тестов для библиотеки matrix </div>
+<div class="line">│ │── tests_output.c # Набор тестов для библиотеки output </div>
+<div class="line">│ │── tests_main.c # Общие тесты </div>
+<div class="line">│ │── test_runner.c # Запуск тестов с использованием CUnit </div>
+<div class="line">│── docs/ # Сгенерированная документация Doxygen </div>
+<div class="line">│── build/ # Каталог для собранных файлов </div>
+<div class="line">│── Makefile # Makefile для сборки проекта </div>
+<div class="line">│── README.md # Описание проекта, инструкции по установке и использованию </div>
+<div class="line">│── .gitignore # Игнорируемые файлы в git (build/, *.o, docs/) </div>
+<div class="line">│── .clang-format # Настройки форматирования кода </div>
+<div class="line">│── .github/ </div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Основные функции</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+1. Создание и удаление матриц</h2>
+<p>Matrix *create_matrix(int rows, int cols) - Создает матрицу заданного размера и инициализирует её нулями. Возвращает указатель на созданную матрицу или NULL, если выделение памяти не удалось.</p>
+<p>void free_matrix(Matrix *matrix) - Освобождает память, выделенную под матрицу.</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+2. Загрузка и сохранение матриц</h2>
+<p>Matrix *load_matrix_from_file(const char *filename) - Загружает матрицу из текстового файла. Файл должен содержать размеры матрицы (количество строк и столбцов), а затем элементы матрицы.</p>
+<p>char *converting_to_string(Matrix *matrix) - Преобразует матрицу в строку для вывода в консоль или сохранения в файл.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+3. Операции с матрицами</h2>
+<p>Matrix *add_matrices(const Matrix *A, const Matrix *B) - Складывает две матрицы. Возвращает новую матрицу-результат или NULL, если размеры матриц не совпадают.</p>
+<p>Matrix *subtract_matrices(const Matrix *A, const Matrix *B) - Вычитает одну матрицу из другой. Возвращает новую матрицу-результат или NULL, если размеры матриц не совпадают.</p>
+<p>Matrix *multiply_matrices(const Matrix *A, const Matrix *B) - Умножает две матрицы. Возвращает новую матрицу-результат или NULL, если количество столбцов первой матрицы не совпадает с количеством строк второй.</p>
+<p>Matrix *transpose_matrix(const Matrix *matrix) - Транспонирует матрицу. Возвращает новую транспонированную матрицу или NULL, если исходная матрица не была создана.</p>
+<p>MATRIX_TYPE determinant(const Matrix *matrix) - Вычисляет детерминант квадратной матрицы. Возвращает значение детерминанта.</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+4. Вычисление выражения</h2>
+<p>Matrix *compute_expression(const Matrix *A, const Matrix *B, const Matrix *C, const Matrix *D) - Вычисляет выражение (A^T − B + C) × D, где A^T — транспонированная матрица A. Возвращает результирующую матрицу или NULL, если входные данные некорректны.</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+5. Вывод данных</h2>
+<p>void print_data(const char *data, int type_of_output) - Выводит данные в консоль или сохраняет их в файл results/result.txt в зависимости от выбора пользователя.</p>
+<p>void save_to_file(const char *data, const char *path) - Сохраняет данные в указанный файл.</p>
+<p>void erase_file_data(const char *path) - Очищает содержимое файла.</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Установка и сборка</h1>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Требования</h2>
+<p>Компилятор C (gcc, clang и т. д.) Make CUnit (для тестирования) Doxygen (для документации)</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Установка</h2>
+<p>Клонируйте репозиторий: </p><div class="fragment"><div class="line">   git clone https://github.com/barsikk96/matrix_project.git</div>
+<div class="line">   cd matrix_project</div>
+<div class="line"> </div>
+<div class="line">###Сборка проекта</div>
+</div><!-- fragment --><p> make </p><div class="fragment"><div class="line">##Использование</div>
+<div class="line">Основное приложение загружает матрицы из файлов matrixA.txt, matrixB.txt, matrixC.txt, matrixD.txt, выполняет выражение (A^T − B + C) × D и выводит результат в консоль или сохраняет его в файл results/result.txt. Для запуска основного приложения выполните из директории </div>
+</div><!-- fragment --><p> build/```: </p><div class="fragment"><div class="line">./matrix_main</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
+Тестирование</h1>
+<p>Проект включает в себя набор тестов, написанных с использованием библиотеки CUnit. Для запуска тестов выполните из директории <code>build/</code>: </p><div class="fragment"><div class="line">./test_runner</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
+Форматирование кода</h1>
+<p>Для форматирования кода в соответствии с настройками .clang-format выполните: </p><div class="fragment"><div class="line">make format</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md14"></a>
+Очистка проекта</h1>
+<p>Для удаления скомпилированных файлов выполните: </p><div class="fragment"><div class="line">make clean</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

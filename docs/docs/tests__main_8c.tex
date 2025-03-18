@@ -1,0 +1,61 @@
+\doxysection{Файл tests/tests\+\_\+main.c}
+\hypertarget{tests__main_8c}{}\label{tests__main_8c}\index{tests/tests\_main.c@{tests/tests\_main.c}}
+{\ttfamily \#include "{}tests\+\_\+main.\+h"{}}\newline
+Граф включаемых заголовочных файлов для tests\+\_\+main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests__main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structMatrix}{Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{tests__main_8c_ad02e15e1f587e159e0a75056ea1c6c02}{create\+\_\+matrix\+\_\+with\+\_\+values}} (int rows, int cols, \mbox{\hyperlink{config_8h_afe97592ec7380216ca494c4134cad077}{MATRIX\+\_\+\+TYPE}} values\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Создает матрицу с заданными значениями \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tests__main_8c_aa5c7bbbb26155245d20fc4096ce84cab}{test\+\_\+compute\+\_\+expression}} ()
+\begin{DoxyCompactList}\small\item\em Тестирует функцию compute\+\_\+expression. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tests__main_8c_ae7787a7c7e37acce6f4806656c30a5b3}{test\+\_\+matrix\+\_\+create\+\_\+performance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\Hypertarget{tests__main_8c_ad02e15e1f587e159e0a75056ea1c6c02}\label{tests__main_8c_ad02e15e1f587e159e0a75056ea1c6c02} 
+\index{tests\_main.c@{tests\_main.c}!create\_matrix\_with\_values@{create\_matrix\_with\_values}}
+\index{create\_matrix\_with\_values@{create\_matrix\_with\_values}!tests\_main.c@{tests\_main.c}}
+\doxysubsubsection{\texorpdfstring{create\_matrix\_with\_values()}{create\_matrix\_with\_values()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMatrix}{Matrix}} \texorpdfstring{$\ast$}{*} create\+\_\+matrix\+\_\+with\+\_\+values (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols,  }\item[{\mbox{\hyperlink{config_8h_afe97592ec7380216ca494c4134cad077}{MATRIX\+\_\+\+TYPE}}}]{values\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Создает матрицу с заданными значениями 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em rows} & Количество строк \\
+\hline
+{\em cols} & Количество столбцов \\
+\hline
+{\em values} & Массив значений для инициализации матрицы \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Указатель на созданную матрицу или NULL в случае ошибки 
+\end{DoxyReturn}
+\Hypertarget{tests__main_8c_aa5c7bbbb26155245d20fc4096ce84cab}\label{tests__main_8c_aa5c7bbbb26155245d20fc4096ce84cab} 
+\index{tests\_main.c@{tests\_main.c}!test\_compute\_expression@{test\_compute\_expression}}
+\index{test\_compute\_expression@{test\_compute\_expression}!tests\_main.c@{tests\_main.c}}
+\doxysubsubsection{\texorpdfstring{test\_compute\_expression()}{test\_compute\_expression()}}
+{\footnotesize\ttfamily void test\+\_\+compute\+\_\+expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тестирует функцию compute\+\_\+expression. 
+
+Создает тестовые матрицы, вычисляет выражение и проверяет результат. В случае ошибки выводит сообщение и завершает программу. \Hypertarget{tests__main_8c_ae7787a7c7e37acce6f4806656c30a5b3}\label{tests__main_8c_ae7787a7c7e37acce6f4806656c30a5b3} 
+\index{tests\_main.c@{tests\_main.c}!test\_matrix\_create\_performance@{test\_matrix\_create\_performance}}
+\index{test\_matrix\_create\_performance@{test\_matrix\_create\_performance}!tests\_main.c@{tests\_main.c}}
+\doxysubsubsection{\texorpdfstring{test\_matrix\_create\_performance()}{test\_matrix\_create\_performance()}}
+{\footnotesize\ttfamily void test\+\_\+matrix\+\_\+create\+\_\+performance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
